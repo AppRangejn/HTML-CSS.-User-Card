@@ -1,16 +1,11 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
 
 .card {
     border: 2px solid black;
     width: 350px;
     border-radius: 10px;
     text-align: center;
+    margin: 50px auto;
+    overflow: hidden;
 }
 
 
@@ -41,6 +36,7 @@ body {
     object-fit: cover;
     border: 5px solid ghostwhite;
     margin-bottom: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -53,6 +49,7 @@ body {
 .descriptionBlock p {
     font-size: 14px;
     margin-bottom: 25px;
+    
 }
 
 
@@ -70,18 +67,24 @@ body {
 .outsideBlock {
     background-color: #2c3e50; 
     display: flex;
-    justify-content: space-around;
-    padding: 20px 10px;
+    justify-content: space-around;;
 }
 
 
 .photoPost, .favourite, .message {
     display: flex;
+    flex: 1;
     flex-direction: row;
     align-items: center;
     gap: 10px;
     color: red;
     font-size: 12px;
+    padding: 10px 20px;
+}
+
+.photoPost, .favourite, .message:not(:last-child) {
+    border-right: 1px solid #34495e;
+    
 }
 
 .statText {
@@ -95,12 +98,9 @@ body {
     width: 24px;
     height: 24px;
     margin-bottom: 0px;
-    opacity: 0.7;
-    filter: invert(27%) sepia(91%) saturate(2352%) hue-rotate(346deg) brightness(104%) contrast(87%);
 }
 
 .outsideBlock span {
-    text-transform: capitalize;
     margin-bottom: 4px;
 }
 
